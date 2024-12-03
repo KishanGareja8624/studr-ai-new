@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "framework": "remix",
+  "buildCommand": "remix build",
+  "devCommand": "remix dev",
+  "installCommand": "npm install",
+  "regions": ["iad1"]
+}
