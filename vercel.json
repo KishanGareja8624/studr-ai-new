@@ -5,10 +5,7 @@
   "devCommand": "npx remix dev",
   "installCommand": "npm install",
   "regions": ["iad1"],
-  "builds": [
-    { "src": "build/index.js", "use": "@vercel/node" }
-  ],
-  "routes": [
-    { "src": "/(.*)", "dest": "build/index.js" }
+  "rewrites": [
+    { "source": "/build/*", "destination": "/build/*" }
   ]
 }
