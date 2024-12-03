@@ -3,9 +3,9 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
-    "build": "remix build",
     "dev": "remix dev",
-    "start": "remix-serve ./build/index.js",
+    "build": "remix build",
+    "start": "remix start",
     "typecheck": "tsc"
   },
   "dependencies": {
@@ -68,6 +68,6 @@
     "typescript": "^5.1.6"
   },
   "engines": {
-    "node": "20.12.0"
+    "node": ">=20.12.0"
   }
 }
