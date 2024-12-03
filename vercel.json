@@ -1,14 +1,8 @@
 {
   "version": 2,
   "framework": "remix",
-  "buildCommand": "remix build",
+  "buildCommand": "npm run build",
   "devCommand": "remix dev",
   "installCommand": "npm install",
-  "regions": ["iad1"],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.tsx"
-    }
-  ]
+  "regions": ["iad1"]
 }
