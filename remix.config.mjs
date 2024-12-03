@@ -3,10 +3,8 @@ export default {
   ignoredRouteFiles: ["**/.*"],
   serverModuleFormat: "cjs",
   serverPlatform: "node",
+  serverBuildTarget: "vercel",
   serverMinify: false,
-  deployment: {
-    target: 'vercel',
-  },
   serverDependenciesToBundle: [
     "react-markdown",
     "lucide-react",
