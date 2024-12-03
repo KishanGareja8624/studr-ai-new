@@ -1,8 +1,17 @@
 {
-  "version": 2,
-  "framework": "remix",
-  "buildCommand": "npx remix build",
-  "devCommand": "npx remix dev",
-  "installCommand": "npm install",
-  "regions": ["iad1"]
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/node",
+      "config": {
+        "maxLambdaSize": "50mb"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
 }

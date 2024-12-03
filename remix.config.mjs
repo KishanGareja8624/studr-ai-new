@@ -4,6 +4,9 @@ export default {
   serverModuleFormat: "cjs",
   serverPlatform: "node",
   serverMinify: false,
+  deployment: {
+    target: 'vercel',
+  },
   serverDependenciesToBundle: [
     "react-markdown",
     "lucide-react",
