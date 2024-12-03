@@ -1,8 +1,8 @@
 {
   "version": 2,
   "framework": "remix",
-  "buildCommand": "npm run build",
-  "devCommand": "remix dev",
+  "buildCommand": "npx remix build",
+  "devCommand": "npx remix dev",
   "installCommand": "npm install",
   "regions": ["iad1"]
 }
