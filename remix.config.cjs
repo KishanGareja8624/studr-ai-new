@@ -1,8 +1,5 @@
 /** @type {import('@remix-run/dev').AppConfig} */
 module.exports = {
   ignoredRouteFiles: ["**/.*"],
-  serverModuleFormat: "esm",
-  deployment: {
-    target: 'vercel',
-  },
+  serverModuleFormat: "esm"
 };
