@@ -2,16 +2,11 @@
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/node",
-      "config": {
-        "maxLambdaSize": "50mb"
-      }
+      "use": "@vercel/remix"
     }
   ],
   "routes": [
-    {
-      "src": "/.*",
-      "dest": "server.js"
-    }
+    { "handle": "filesystem" },
+    { "src": "/.*", "dest": "/" }
   ]
 }
