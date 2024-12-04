@@ -1,4 +1,6 @@
-import { createRequestHandler } from "@remix-run/vercel";
-import * as build from "./build";
+import { createRequestHandler } from '@remix-run/vercel';
+import * as build from './build';
 
-export default createRequestHandler({ build });
+export default (req, res) => {
+  return createRequestHandler({ build })(req, res);
+};
