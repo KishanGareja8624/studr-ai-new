@@ -1,12 +1,12 @@
 {
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/remix"
-    }
-  ],
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/.*", "dest": "/" }
-  ]
+    "routes": [
+      {
+        "src": "/",
+        "dest": "/"
+      },
+      {
+        "src": "/.*",
+        "dest": "/"
+      }
+    ]
 }
