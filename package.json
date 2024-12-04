@@ -22,7 +22,7 @@
     "@radix-ui/react-toast": "^1.1.5",
     "@radix-ui/react-tooltip": "^1.1.4",
     "@remix-run/netlify": "^1.19.3",
-    "@remix-run/node": "^1.19.3",
+    "@remix-run/node": "^2.15.0",
     "@remix-run/react": "^2.15.0",
     "@remix-run/serve": "^2.15.0",
     "@remix-run/vercel": "^1.19.3",
