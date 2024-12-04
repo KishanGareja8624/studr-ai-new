@@ -4,11 +4,15 @@
     {
       "src": "server.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "build/**/*.js",
+      "use": "@vercel/static-build"
     }
   ],
   "routes": [
     {
-      "src": "/",
+      "src": "/(.*)",
       "dest": "/server.js"
     }
   ]
