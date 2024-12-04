@@ -19,7 +19,7 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
   }
 
   // Dynamically set base URL
-  const baseUrl = process.env.DOMAIN_URL  !;
+  const baseUrl = process.env.DOMAIN_URL!;
   console.log("Base URL:", baseUrl);
 
   return redirect(baseUrl, {

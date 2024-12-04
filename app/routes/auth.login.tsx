@@ -42,7 +42,8 @@ export const action = async ({ request }: ActionFunctionArgs) => {
   const email = formData.get("email") as string
   const password = formData.get("password") as string
   const provider = formData.get("provider") as string
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || new URL(request.url).origin;
+  const baseUrl = process.env.DOMAIN_URL || new URL(request.url).origin;
+  console.log('baseUrl', baseUrl)
   if (provider === "google") {
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: "google",
