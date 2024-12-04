@@ -42,12 +42,12 @@ export const action = async ({ request }: ActionFunctionArgs) => {
   const email = formData.get("email") as string
   const password = formData.get("password") as string
   const provider = formData.get("provider") as string
-
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || new URL(request.url).origin;
   if (provider === "google") {
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {
-        redirectTo: `${new URL(request.url).origin}/auth/callback`,
+        redirectTo: `${baseUrl}/auth/callback`,
       },
     })
 
