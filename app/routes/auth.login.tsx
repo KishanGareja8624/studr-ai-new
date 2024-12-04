@@ -44,10 +44,14 @@ export const action = async ({ request }: ActionFunctionArgs) => {
   const provider = formData.get("provider") as string
 
   if (provider === "google") {
+    const redirectTo = process.env.NODE_ENV === "production"
+      ? process.env.PROD_URL + "/auth/callback" 
+      : `${new URL(request.url).origin}/auth/callback`;
+
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {
-        redirectTo: `${new URL(request.url).origin}/auth/callback`,
+        redirectTo,
       },
     })
 
@@ -92,9 +96,9 @@ export default function LoginPage() {
         <div className="grid gap-6">
           <Form method="post">
             <input type="hidden" name="provider" value="google" />
-            <Button 
-              type="submit" 
-              variant="outline" 
+            <Button
+              type="submit"
+              variant="outline"
               className="w-full bg-background"
               disabled={isSubmitting}
             >
